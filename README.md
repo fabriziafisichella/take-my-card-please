@@ -1,4 +1,5 @@
 ![Preview](./github_md_preview.png)
+![Preview](./github_md_preview2.png)
 
 # » Take My Card, Please 
 ### Educational project. [ `NEXT.JS` | `JAVASCRIPT` | `CSS / SASS`]
