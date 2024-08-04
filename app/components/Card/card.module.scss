@@ -1,0 +1,77 @@
+@use "../../assets/mixins";
+@use "../../assets/variables";
+
+.container {
+  @include mixins.componentContainer();
+  background: variables.$gradient-bg;
+  flex-direction: column;
+  gap: 50px;
+
+  .cardFront {
+    @include mixins.card();
+    background: variables.$gradient;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+    .info {
+      color: #fff;
+
+      .number {
+        letter-spacing: 3px;
+        font-size: 20px;
+        font-family: variables.$font;
+        padding-block: 10px;
+      }
+
+      .otherInfo {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        span {
+          font-family: variables.$font;
+          font-variant: all-small-caps;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .cardBack {
+    position: relative;
+    @include mixins.card();
+    background: variables.$background-color;
+    padding: 20px;
+
+    .banner {
+      position: absolute;
+      height: variables.$input-height;
+      width: 100%;
+      background-color: variables.$steelgray-color;
+      left: 0;
+      top: 30px;
+    }
+
+    .logo {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      text-align: center;
+      align-items: center;
+    }
+
+    .cvc {
+      position: absolute;
+      @include mixins.input();
+      background: #ffffff81;
+      border: none;
+      bottom: 20px;
+      width: 89%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

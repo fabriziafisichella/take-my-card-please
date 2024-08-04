@@ -1,0 +1,50 @@
+@use "../../assets/mixins";
+@use "../../assets/variables";
+
+.container {
+  @include mixins.componentContainer();
+  background-color: variables.$background-color;
+
+  .form {
+    width: variables.$form-width;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    input {
+      @include mixins.input();
+    }
+
+    .longInputs {
+      color: variables.$steelgray-color;
+      @include mixins.text();
+    }
+
+    .shortInputs {
+      @include mixins.text();
+      display: flex;
+      justify-content: space-between;
+
+      .date {
+        width: 55%;
+
+        input {
+          width: 45%;
+          margin-right: 10px;
+        }
+      }
+
+      .cvc {
+        width: 40%;
+      }
+    }
+
+    button {
+      @include mixins.button();
+      @include mixins.text();
+      font-size: 20px;
+      font-weight: normal;
+      color: #fff;
+    }
+  }
+}

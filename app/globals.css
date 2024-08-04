@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  -ms-overflow-style: none; /* Hides ScrollBar in Internet Explorer 10+ */
+  scrollbar-width: none; /* Hides Scrollbar in Firefox and Opera */
+  scroll-behavior: smooth scroll;
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Hides ScrollBar in Safari and Chrome */
+}
